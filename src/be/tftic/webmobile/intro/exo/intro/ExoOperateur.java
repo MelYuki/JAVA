@@ -1,4 +1,4 @@
-package be.tftic.webmobile.intro.exo.type;
+package be.tftic.webmobile.intro.exo.intro;
 
 import java.util.Scanner;
 
@@ -18,18 +18,21 @@ public class ExoOperateur {
         System.out.println("Nombre de secondes? ");
         int ns = input.nextInt();
 
+        // Typage des variables
+        int jr, hr, min;
+
         // On divise le nombre de sec obtenu par celui par jour
-        int jr = ns / sec_jr;
+        jr = ns / sec_jr;
         // On retient le reste de la division
         ns %= sec_jr;
 
         // On divise le reste retenu par le nombre de sec par heure
-        int hr = ns / sec_hr;
+        hr = ns / sec_hr;
         // on retient le reste de la division
         ns %= sec_hr;
 
         // On divise le reste retenu par le nombre de sec par minute
-        int min = ns / sec_min;
+        min = ns / sec_min;
         // on retient ce qui reste pour afficher les secondes restantes!
         ns %= sec_min;
 

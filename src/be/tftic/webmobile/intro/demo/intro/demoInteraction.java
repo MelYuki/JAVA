@@ -1,4 +1,4 @@
-package be.tftic.webmobile.intro.demo.variables;
+package be.tftic.webmobile.intro.demo.intro;
 
 import java.util.Scanner;
 
