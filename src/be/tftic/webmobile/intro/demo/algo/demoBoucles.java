@@ -1,4 +1,4 @@
-package be.tftic.webmobile.intro.demo.intro;
+package be.tftic.webmobile.intro.demo.algo;
 
 import java.util.Scanner;
 
