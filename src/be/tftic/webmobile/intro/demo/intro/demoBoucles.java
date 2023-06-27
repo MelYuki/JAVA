@@ -45,5 +45,18 @@ public class demoBoucles {
         for( /*je peux ne rien mettre*/; (a=sc.next()).length() > 5 ; /*je peux ne rien mettre*/);
 
         System.out.println("///");
+
+
+        // FOREACH
+        int[] ints = {1, 2, 3};
+        for (int entier : ints) {
+            entier++; // 1 -> 2
+            // entier est une variable
+            // entier contient la copie des valeurs du tableau
+            // Agir sur entier n'a pas d'effet sur les valeurs du tableau
+        }
+        for (int entier : ints) {
+            System.out.println(ints);
+        }
     }
 }
