@@ -4,10 +4,52 @@ public class Personne {
 
     String nom;
     String prenom;
-    int age;
+    int age = 35;
+    boolean bjr = true;
 
+
+    Personne(){}
+    Personne(String nom, String prenom){
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+    Personne(String nom, String prenom, int age){
+        this.nom = nom;
+        this.prenom = prenom;
+        this.age = age;
+    }
+
+
+    void saluer(){
+
+        System.out.println("  Bonjour!");
+    }
+    void saluer(boolean sePresenter){
+
+        if(bjr)
+            saluer();
+
+        if(sePresenter)
+            System.out.printf("  Je m'appelle %s %s et j'ai %d ans.\n",
+                    this.prenom,
+                    this.nom,
+                    this.age
+            );
+    }
     void saluer (Personne aSaluer) {
-        System.out.printf("Bonjour %s %s\n", aSaluer.prenom, aSaluer.nom);
-        System.out.printf("Je m'appelle %s %s et j'ai %d ans\n", this.prenom, this.nom, this.age);
+
+        System.out.printf("  Bonjour %s %s!\n",
+                aSaluer.prenom,
+                aSaluer.nom
+        );
+    }
+    void saluer (Personne aSaluer, boolean sePresenter) {
+
+        saluer(aSaluer);
+
+        if(sePresenter) {
+            bjr = false;
+            saluer(sePresenter);
+        }
     }
 }

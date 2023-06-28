@@ -12,6 +12,8 @@ public class Main {
 
         Velo velo3 = new Velo("bleu");
 
+        System.out.println(velo.petitesRoues); // false
+
 
     }
 }

@@ -4,19 +4,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Personne perso1 = new Personne();
-        Personne perso2 = new Personne();
+        Personne perso1 = new Personne("Taï", "Mel", 34);
+        Personne perso2 = new Personne("Grind", "Billy");
 
-        perso1.nom = "TaÏ";
-        perso1.prenom = "Mel";
-        perso1.age = 34;
+        System.out.printf("\n%s: \n", perso1.prenom);
+        perso1.saluer(); // OK
 
-        perso2.nom = "Grind";
-        perso2.prenom = "Billy";
-        perso2.age = 28;
+        System.out.printf("\n%s: \n", perso2.prenom);
+        perso2.saluer(true); // OK
 
-        perso1.saluer(perso2);
-        perso2.saluer(perso1);
+        System.out.printf("\n%s: \n", perso1.prenom);
+        perso1.saluer(perso2, true); // OK
+
+        System.out.printf("\n%s: \n", perso2.prenom);
+        perso2.saluer(perso1); // OK
 
     }
 }
