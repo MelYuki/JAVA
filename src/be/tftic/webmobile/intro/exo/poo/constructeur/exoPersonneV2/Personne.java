@@ -5,8 +5,6 @@ public class Personne {
     String nom;
     String prenom;
     int age = 35;
-    boolean bjr = true;
-
 
     Personne(){}
     Personne(String nom, String prenom){
@@ -26,15 +24,14 @@ public class Personne {
     }
     void saluer(boolean sePresenter){
 
-        if(bjr)
-            saluer();
-
         if(sePresenter)
             System.out.printf("  Je m'appelle %s %s et j'ai %d ans.\n",
                     this.prenom,
                     this.nom,
                     this.age
             );
+        else
+            saluer();
     }
     void saluer (Personne aSaluer) {
 
@@ -48,7 +45,6 @@ public class Personne {
         saluer(aSaluer);
 
         if(sePresenter) {
-            bjr = false;
             saluer(sePresenter);
         }
     }
