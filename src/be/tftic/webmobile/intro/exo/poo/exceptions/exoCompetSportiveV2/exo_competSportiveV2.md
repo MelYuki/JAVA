@@ -1,7 +1,8 @@
+
 Rajoutez les méthodes suivantes à la compétition:
 
 lancer(): 
-	génére le gagnant de la compèt.
+	génère le gagnant de la compèt.
 	une compétition déjà lancé ne peut être relancée.
 	Il faut au minimum 3 participants pour lancer la compétition.
 getGagnant():
